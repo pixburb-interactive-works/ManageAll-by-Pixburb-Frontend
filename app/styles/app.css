@@ -89,3 +89,55 @@ input:focus {
   height: 40px;
   border-radius: 20px;
 }
+
+.pl-50 {
+  padding-left: 50px;
+}
+
+.w-30 {
+  width: 30px;
+}
+
+.h-30 {
+  height: 30px;
+}
+
+.h-80 {
+  height: 80px;
+}
+
+.valign-middle {
+  vertical-align: middle;
+}
+
+.inline-blk {
+  display: inline-block;
+}
+
+.h-100p {
+  height: 100%;
+}
+
+.main-body {
+  background-color: #ebeef2;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.w-50p {
+  width: 50%;
+}
+
+.mt-m-20 {
+  margin-top: -20px;
+}
+
+.mb-m-20 {
+  margin-bottom: -20px;
+}
