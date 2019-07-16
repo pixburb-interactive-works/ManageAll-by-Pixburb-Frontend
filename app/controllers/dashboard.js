@@ -3,6 +3,10 @@ import Ember from "ember";
 export default Ember.Controller.extend({
   showNotification: false,
   tabSelected: "dashboard",
+  userDisplayName: "Mec Gill",
+  userMailId: "mec.gill@gmail.com",
+  plan: "Basic",
+  profileIcon: "images/reguser.svg",
   tabs: [{
       name: "Dashboard",
       image: "images/dashboard.svg",
@@ -52,6 +56,10 @@ export default Ember.Controller.extend({
     },
     selectTab: function (tab) {
       this.set("tabSelected", tab);
+      this.get("tabs").forEach(element => {
+        Ember.$("#" + element.tab).removeClass("active");
+      });
+      Ember.$("#" + tab).addClass("active");
     }
   }
 });

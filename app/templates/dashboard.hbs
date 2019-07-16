@@ -12,13 +12,25 @@
 
     </div>
     {{!-- left pane --}}
-    <div class="w-20p pull-left bg-ebeef2">
+    <div class="w-20p pull-left bg-ebeef2 tabs">
         {{#each tabs as |tab|}}
-        <div class="h-50 tab pt-10 pb-10 pl-30 pointer" {{action "selectTab" tab.tab}}>
+        <div class="h-50 tab pt-10 pb-10 pl-30 pointer" {{action "selectTab" tab.tab}} id={{tab.tab}}>
             <img src={{tab.image}} class="w-30 h-30 inline-icon">
             <span class="">{{tab.name}}</span>
         </div>
         {{/each}}
+        <div class="profile bg-d8dce2">
+            <img src={{profileIcon}} class="w-30p h-30p pt-20 ml-35" />
+            <br>
+            <span class="tc mt-10 mb-10"><b>{{userDisplayName}}</b></span>
+            <br>
+            <span class="tc mt-10 mb-10">{{userMailId}}</span>
+            <br>
+            <span class="tc mt-10 mb-10 c-0db46e">Your Plan : {{plan}}</span>
+            <br>
+            <button class="btn-0db46e">Settings</button>
+
+        </div>
     </div>
     {{!-- dashboard --}}
     <div class="w-80p pull-right">
@@ -29,7 +41,7 @@
 
 {{!-- notification --}}
 {{#if showNotification}}
-<div class="notification-tab pull-right w-30p">
+<div class="notification-tab pull-right w-20p">
     <div class="notification-header">
         <h3 class="ml-25">NOTIFICATION</h3>
     </div>
