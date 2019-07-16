@@ -2,7 +2,7 @@
     {{!-- Header --}}
     <div class="page-header h-80">
         <div class="pull-left h-100p w-50p">
-            <img src="images\Logo.png" class="pl-50 mt-m-20 mb-m-20">
+            <img src="images\Logo.png" class="pl-30 mt-m-20 mb-m-20">
         </div>
         <div class="pull-right h-100p w-50p">
             <a href="#" class="pull-right mt-m-20 mb-m-20" {{action "showNotification"}}>
@@ -12,10 +12,17 @@
 
     </div>
     {{!-- left pane --}}
-    <div></div>
+    <div class="w-20p pull-left bg-ebeef2">
+        {{#each tabs as |tab|}}
+        <div class="h-50 tab pt-10 pb-10 pl-30 pointer" {{action "selectTab" tab.tab}}>
+            <img src={{tab.image}} class="w-30 h-30 inline-icon">
+            <span class="">{{tab.name}}</span>
+        </div>
+        {{/each}}
+    </div>
     {{!-- dashboard --}}
-    <div>
-
+    <div class="w-80p pull-right">
+        {{load-content data=selectedTab}}
     </div>
 
 </div>
